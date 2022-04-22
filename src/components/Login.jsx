@@ -32,7 +32,7 @@ const Login = () => {
         //   setToken(localStorage.getItem("accessToken"));
           dispatch(storeToken(localStorage.getItem("accessToken")));
         }
-    }, []);
+    }, [dispatch]);
 
     useEffect(() => {
         if (window.location.hash) {
@@ -44,7 +44,7 @@ const Login = () => {
           localStorage.setItem("tokenType", token_type);
           localStorage.setItem("expiresIn", expires_in);
         }
-    }, [getHashParams]);
+    }, []);
 
     const handleLogin = () => {
         window.location = `${spotify_auth_endpoint}?client_id=${spotify_client_id}&redirect_uri=${redirect_uri}&scope=${scope}&response_type=token&show_dialog=true`;

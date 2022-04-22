@@ -13,7 +13,6 @@ import NavBar from "./NavBar";
 
 const spotify_tracks_endpoint = "https://api.spotify.com/v1/search";
 const spotify_getprofile_endpoint = "https://api.spotify.com/v1/me";
-const spotify_create_playlist_endpoint = "https://api.spotify.com/v1/users/user_id/playlists";
 
 const getHashParams = (hash) => {
   const stringAfterHashtag = hash.substring(1);
@@ -54,7 +53,7 @@ const CreatePlaylist = () => {
       // setToken(localStorage.getItem("accessToken"));
       dispatch(storeToken(localStorage.getItem("accessToken")));
     }
-  }, []);
+  }, [dispatch]);
 
   useEffect(() => {
     if (window.location.hash) {
