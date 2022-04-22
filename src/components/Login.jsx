@@ -8,7 +8,7 @@ import Button from '@mui/material/Button';
 
 const spotify_client_id = process.env.REACT_APP_SPOTIFY_CLIENT_ID;
 const spotify_auth_endpoint = "https://accounts.spotify.com/authorize";
-const redirect_uri = "https://https://gg-fe-final-project.vercel.app/";
+const redirect_uri = "https://https://gg-fe-final-project.vercel.app";
 const scope = "user-read-private playlist-modify-private";
 
 const getHashParams = (hash) => {
