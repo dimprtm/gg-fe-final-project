@@ -1,9 +1,10 @@
 import React from 'react';
+import Button from '@mui/material/Button';
 
 const ButtonDeselect = () => {
 	return (
 		<>
-			<button>Deselect</button>
+			<Button variant="outlined" size='small' style={{backgroundColor: "#"}}>Deselect</Button>
 		</>
 	);
 };

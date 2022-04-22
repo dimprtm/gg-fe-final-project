@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import './Spotify.css';
 import SpotifyLogo from '../../src/assets/SpotifyLogo.svg';
 import { storeToken } from "../actions";
 import { useDispatch } from "react-redux";
 import {Redirect} from 'react-router-dom';
+import Button from '@mui/material/Button';
 
 const spotify_client_id = process.env.REACT_APP_SPOTIFY_CLIENT_ID;
 const spotify_auth_endpoint = "https://accounts.spotify.com/authorize";
@@ -24,7 +25,6 @@ const getHashParams = (hash) => {
 };
 
 const Login = () => {
-    const [token, setToken] = useState('');
     const dispatch = useDispatch();
 
     useEffect(() => {
@@ -56,14 +56,18 @@ const Login = () => {
         <Redirect to="/create-playlist" />
       ) : (
         <div className="login">
-          <button onClick={handleLogin} className="btn-spotify">
+          <Button 
+          onClick={handleLogin}
+          className="btn-spotify"
+          style={{backgroundColor: "rgb(31,214,96)", color: "black"}}
+          >
             <img
               src={SpotifyLogo}
               className="spotify-logo"
               alt="spotify-logo"
             />
-            Login to Spotify
-          </button>
+            Login with Spotify
+          </Button>
         </div>
       )}
     </div>

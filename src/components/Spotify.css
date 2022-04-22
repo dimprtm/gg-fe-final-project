@@ -14,6 +14,7 @@ input[type=submit] {
 
 .container {
     width: 100%;
+    margin: 0 24px;
     /* display: flex;
     justify-content: flex-start;
     align-items: flex-start; */

@@ -1,9 +1,10 @@
 import React from 'react';
+import Button from '@mui/material/Button';
 
 const ButtonSelect = () => {
 	return (
 		<>
-			<button>Select</button>
+			<Button variant="contained" >Select</Button>
 		</>
 	);
 };
